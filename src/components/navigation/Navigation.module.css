@@ -1,0 +1,11 @@
+.nav {
+    border: 1px solid black;
+}
+
+.nav_li{
+    color: blue;
+}
+
+.nav_li--active{
+    color: red;
+}
