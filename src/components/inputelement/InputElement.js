@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./InputElement.module.css"
 
-function InputElement({ name, inputType, placeholder, register, validationRules, errors}) {
+function InputElement({name, inputType, placeholder, register, validationRules, errors}) {
     return (
         <>
             <label htmlFor={`${name}-field`} className={styles["input_label"]}>
@@ -11,7 +11,7 @@ function InputElement({ name, inputType, placeholder, register, validationRules,
                     className={styles["input_field"]}
                     placeholder={placeholder}
                     {...register(name, validationRules)}
-                    />
+                />
                 {errors[name] && <p>{errors[name].message}</p>}
             </label>
         </>
