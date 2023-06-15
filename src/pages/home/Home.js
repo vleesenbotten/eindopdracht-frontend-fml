@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from "../../components/button/Button";
-import Countdown from "../../components/Countdown";
+import Countdown from "../../components/countdown/Countdown";
 
 function Home() {
     return (
