@@ -49,10 +49,3 @@ function Search() {
 }
 
 export default Search;
-//
-// <>
-//     {/*<img src={gameData.results[0].background_image} alt="image" width="400" height="200"/>*/}
-//     {/*<p>{gameData.results[0].name}</p>*/}
-//     {/*<p>{gameData.results[0].metacritic}</p>*/}
-//     {/*<p>{gameData.results[0].genres[0].name}</p><p>{gameData.results[0].genres[1].name}</p>*/}
-// </>
