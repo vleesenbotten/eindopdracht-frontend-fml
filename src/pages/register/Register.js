@@ -25,6 +25,7 @@ function Register() {
                 "username": data.username,
                 "email": data.email,
                 "password": data.password,
+                "info": data.info,
                 "role": ["user"],
             });
             navigate('/login');
@@ -77,6 +78,22 @@ function Register() {
                     errors={errors}
                     register={register}
                     required
+                    name="info"
+                    inputType="text"
+                    placeholder="cool fact about yourself"
+                    validationRules={{
+                        required: "cool fact is required",
+                        minLength: {
+                            value: 8,
+                            message: "tell a bit more than that"
+                        }
+                    }
+                    }
+                />
+                <InputElement
+                    errors={errors}
+                    register={register}
+                    required
                     name="password"
                     inputType="password"
                     placeholder="enter password"
@@ -92,7 +109,7 @@ function Register() {
                     errors={errors}
                     register={register}
                     required
-                    name="confirmPassword"
+                    name="confirm password"
                     inputType="password"
                     placeholder="repeat your password"
                     validationRules={{

@@ -6,7 +6,7 @@ import axios from "axios";
 import {AuthContext} from "../../context/AuthContext";
 
 function Login() {
-    const { login } = useContext(AuthContext);
+    const { userLogin } = useContext(AuthContext);
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
     const {register, handleSubmit, formState: {errors}, watch} = useForm({mode: "onChange"})
@@ -22,9 +22,8 @@ function Login() {
                 "username": data.username,
                 "password": data.password,
             })
-            // login(result.data.accesToken);
-
-            login();
+            console.log(result.data);
+            userLogin(result.data.accesToken);
 
         } catch (e) {
             console.error(e);
@@ -37,7 +36,7 @@ function Login() {
         <>
             <AuthForm clickHandler={handleSubmit(requestLogin)}
                       text="Login"
-                      error={error && <span>Combination of e-mail and password is incorrect.</span>}
+                      error={error && <span>Combination is incorrect.</span>}
                       loading={loading && <span>Loading...</span>}
             >
                 <InputElement

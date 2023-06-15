@@ -21,9 +21,10 @@ function AuthContextProvider({ children }) {
     useEffect(() => {
         const token = localStorage.getItem('token');
 
-        if(token && isTokenValid(token)){
+    // && isTokenValid(token)
+        if(token){
             const decoded = jwt_decode(token);
-            void fetchUserData(decoded.sub, token)
+            fetchUserData(decoded.sub, token)
         } else {
             toggleIsAuth({
                 isAuth: false,
@@ -33,12 +34,10 @@ function AuthContextProvider({ children }) {
         }
     }, []);
 
-    function login(JWT) {
+    function userLogin(JWT) {
         localStorage.setItem('token', JWT);
         const decoded = jwt_decode(JWT);
-        fetchUserData(decoded.sub, JWT);
-
-        navigate('/profile');
+        fetchUserData(decoded.sub, JWT, './profile');
         console.log("I work");
     }
 
@@ -54,7 +53,7 @@ function AuthContextProvider({ children }) {
         navigate('/');
     }
 
-    async function fetchUserData(id, token) {
+    async function fetchUserData(id, token, redirect) {
         try{
             const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
                 headers: {
@@ -74,6 +73,10 @@ function AuthContextProvider({ children }) {
                 status: 'done',
             });
 
+            if(redirect) {
+                navigate(redirect);
+            }
+
         } catch(e) {
             console.error(e);
             toggleIsAuth({
@@ -81,13 +84,15 @@ function AuthContextProvider({ children }) {
                 user: null,
                 status: 'done',
             });
+            console.error(e);
+            localStorage.clear();
         }
     }
 
     const data = {
         isAuth: isAuth.isAuth,
         user: isAuth.user,
-        authlogin: login,
+        userLogin: userLogin,
         logout: logout,
     };
 
