@@ -6,6 +6,7 @@ function Home() {
         <>
             <h1>Welcome to the gunshow</h1>
             <p>*kisses biceps*</p>
+            <p>Is this where the magic happens?</p>
         </>
     );
 }
