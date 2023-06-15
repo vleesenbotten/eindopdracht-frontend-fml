@@ -31,6 +31,12 @@ function Navigation() {
                         register
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink to="/search"
+                             className={({ isActive }) => isActive ? styles["nav_li--active"] : styles["nav_li"] }>
+                        search
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );

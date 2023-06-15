@@ -5,6 +5,7 @@ function InputElement({name, inputType, placeholder, register, validationRules, 
     return (
         <>
             <label htmlFor={`${name}-field`} className={styles["input_label"]}>
+                <p>{name}</p>
                 <input
                     type={inputType}
                     id={`${name}-field`}
