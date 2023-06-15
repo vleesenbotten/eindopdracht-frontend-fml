@@ -2,7 +2,7 @@ import React, {useContext, useRef, useState} from 'react';
 import {useForm} from "react-hook-form";
 import AuthForm from "../../components/authform/AuthForm";
 import InputElement from "../../components/inputelement/InputElement";
-import {AuthContext} from "../../context/AuthContext";
+// import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 import {useNavigate} from "react-router";
 
