@@ -1,0 +1,42 @@
+[
+  {
+    "id": "0",
+    "title": "Test",
+    "content": "Test",
+    "tags": [
+      {
+        "id": 1,
+        "name": "game-review"
+      },
+      {
+        "id": 2,
+        "name": "news"
+      },
+      {
+        "id": 3,
+        "name": "pc"
+      },
+      {
+        "id": 4,
+        "name": "xbox"
+      },
+      {
+        "id": 5,
+        "name": "playstation"
+      },
+      {
+        "id": 6,
+        "name": "nintendo switch"
+      },
+      {
+        "id": 7,
+        "name": "console review"
+      },
+      {
+        "id": 8,
+        "name": "retro gaming"
+      }
+    ],
+    "date": "2023-01-10 15:30:22"
+  }
+  ]
