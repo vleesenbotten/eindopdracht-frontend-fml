@@ -8,7 +8,7 @@ function Card({ game }) {
             <article>
                 <img src={game.background_image} alt={game.name} width="400" height="200"/>
                 <p>{game.name}</p>
-                <p>{game.metacritic}</p>
+                <p>{game.rating}</p>
                 {game.genres.map((genre) => (
                     <p key={genre.id}>{genre.name}</p>
                 ))}
