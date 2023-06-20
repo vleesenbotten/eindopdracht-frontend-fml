@@ -23,7 +23,7 @@ function Login() {
                 "password": data.password,
             })
             console.log(result.data);
-            userLogin(result.data.accesToken);
+            userLogin(result.data.accessToken);
 
         } catch (e) {
             console.error(e);

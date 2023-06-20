@@ -8,6 +8,7 @@ import Profile from "./pages/profile/Profile";
 import Search from "./pages/search/Search";
 import GameDetails from "./pages/gamedetails/GameDetails";
 
+
 function App() {
   return (
       <>

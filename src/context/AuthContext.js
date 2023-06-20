@@ -21,8 +21,7 @@ function AuthContextProvider({ children }) {
     useEffect(() => {
         const token = localStorage.getItem('token');
 
-    // && isTokenValid(token)
-        if(token){
+        if(token && isTokenValid(token)){
             const decoded = jwt_decode(token);
             fetchUserData(decoded.sub, token)
         } else {
@@ -36,6 +35,7 @@ function AuthContextProvider({ children }) {
 
     function userLogin(JWT) {
         localStorage.setItem('token', JWT);
+        console.log(JWT);
         const decoded = jwt_decode(JWT);
         fetchUserData(decoded.sub, JWT, './profile');
         console.log("I work");
