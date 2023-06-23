@@ -1,44 +1,44 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Details from "../../components/details/Details";
-
+import Error from "../../components/error/Error";
 
 function GameDetail() {
     const [game, setGame] = useState([]);
     const [gameSeries, setGameSeries] = useState([]);
-    const {id} = useParams();
+    const [error, toggleError] = useState(false);
+    const [loading, toggleLoading] = useState(true);
+    const { id } = useParams();
 
     useEffect(() => {
-        async function fetchGameDetails() {
+        async function fetchData() {
             try {
-                const result = await axios.get(
-                    `https://api.rawg.io/api/games/${id}?key=bbf3b0834c524431ae361ae59491575b`
-                );
-                setGame(result.data);
-                // console.log(result.data);
+                toggleLoading(true);
+                toggleError(false);
+                const [gameResponse, gameSeriesResponse] = await Promise.all([
+                    axios.get(`https://api.rawg.io/api/games/${id}?key=bbf3b0834c524431ae361ae59491575b`),
+                    axios.get(`https://api.rawg.io/api/games/${id}/game-series?key=bbf3b0834c524431ae361ae59491575b`)
+                ]);
+
+                setGame(gameResponse.data);
+                setGameSeries(gameSeriesResponse.data.results);
             } catch (error) {
                 console.error(error);
+                toggleError(true);
             }
-        }
-        async function fetchGameSeries() {
-            try {
-                const result = await axios.get(
-                    `https://api.rawg.io/api/games/${id}/game-series?key=bbf3b0834c524431ae361ae59491575b`
-                );
-                setGameSeries(result.data.results);
-                // console.log(result.data.results);
-            } catch (error) {
-                console.error(error);
-            }
+            toggleLoading(false);
         }
 
-        fetchGameSeries();
-        fetchGameDetails();
+        fetchData();
     }, [id]);
 
     return (
-        <Details key={game.id} game={game} gameSeries={gameSeries} />
+        <>
+            {loading && <p>Loading...</p>}
+            {error && <Error message="Failed to fetch game details." />}
+            <Details key={game.id} game={game} gameSeries={gameSeries} />
+        </>
     );
 }
 

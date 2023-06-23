@@ -1,9 +1,8 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {FavoriteContext} from "../../context/FavoriteContext";
-// import toggleFavorite from "../../helpers/toggleFavorite";
 
-function Details({ game, gameSeries }) {
+function Details({ game, gameSeries, errors }) {
 
     const { toggleFavorite, isFavorite } = useContext(FavoriteContext);
 
@@ -29,17 +28,17 @@ function Details({ game, gameSeries }) {
                 <p key={developer.id}>{developer.name}</p>
             ))}
             {game.stores && game.stores.map((store) => (
-                <ul key={store.id}>
-                    <li>
+                <ul>
+                    <li key={store.id}>
                         <Link to={`https://${store.store.domain}`}
                               target="_blank">{store.store.name}</Link>
                     </li>
                 </ul>
             ))}
             {game.tags && game.tags.slice(0, 5).map((tag) => (
-                <ol>
+                <ul>
                     <li key={tag.id}>{tag.name}</li>
-                </ol>
+                </ul>
             ))}
             <Link to={`${game.website}`} target="_blank">
                 website

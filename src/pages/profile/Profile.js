@@ -1,65 +1,74 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {FavoriteContext} from "../../context/FavoriteContext";
 import axios from "axios";
-import Error from "../../components/error/error";
+import Error from "../../components/error/Error";
+import {AuthContext} from "../../context/AuthContext";
 
 function Profile() {
     const { favorites, isFavorite, toggleFavorite } = useContext(FavoriteContext);
-    const [userData, setUserData] = useState("");
+    const [userData, setUserData] = useState('');
+    const { user } = useContext(AuthContext);
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
 
     useEffect(() => {
-        // async function fetchProfileData(){
-        //     toggleError(false);
-        //     toggleLoading(true);
-        //     try{
-        //         const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user');
-        //         setUserData(result.data);
-        //         console.log(result.data)
-        //     } catch(e){
-        //         console.error(e);
-        //         toggleError(true);
-        //     }
-        //     toggleLoading(false);
-        // };
+        async function fetchProfileData(){
+            toggleLoading(true);
+            toggleError(false)
+            const token = localStorage.getItem('token');
 
-        // fetchProfileData();
-    }, [])
+            try{
+                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+                console.log(result.data);
+                setUserData(result.data);
+
+            } catch (e){
+                console.error(e)
+                toggleError(true);
+            }
+            toggleLoading(false);
+        }
+
+        void fetchProfileData();
+    }, []);
 
     return (
         <>
             <img src="https://via.placeholder.com/150x150" alt="logo"/>
             {/*maybe make components of the loading/error?*/}
+            {error && <p>Error</p>}
             {loading && <p>Loading...</p>}
 
-            <h1>A very lovely username</h1>
-            <p>{userData.username}</p>
-            <p>there will be an username here</p>
-            <p>{userData.email}</p>
-            <p>there will be an email here</p>
-            <p>{userData.info}</p>
-            <p>maybe you filled out some info</p>
-            <p>if you wish to change anything about you - dont. you are beautiful as you are</p>
-            <p>also i didn't want to implement that function</p>
-            <div>
-                <h1>Favorites</h1>
-                {favorites.length > 0 ? (
-                    <ul>
-                        {favorites.map((game) => (
-                            <>
-                                <li key={game.id}>{game.name}</li>
-                                <button onClick={() => toggleFavorite(game)}>
-                                    {isFavorite(game.id) ? '</3' : '<3'}
-                                </button>
-                            </>
-                        ))}
-                    </ul>
-                ) : (
-                    <p>No favorites found.</p>
-                )}
-            </div>
-            </>
+            <h1>your private deetz</h1>
+            <p>your username is</p>
+            <p>{user.username}</p>
+            <p>your email is</p>
+            <p>{user.email}</p>
+                <p>if you wish to change anything about you - dont. you are beautiful as you are</p>
+                <p>also i didn't want to implement that function</p>
+                <div>
+                    <h1>Favorites</h1>
+                    {favorites.length > 0 ? (
+                        <ul>
+                            {favorites.map((game) => (
+                                <>
+                                    <li key={game.id}>{game.name}</li>
+                                    <button onClick={() => toggleFavorite(game)}>
+                                        {isFavorite(game.id) ? '</3' : '<3'}
+                                    </button>
+                                </>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>No favorites found.</p>
+                    )}
+                </div>
+        </>
     );
 }
 

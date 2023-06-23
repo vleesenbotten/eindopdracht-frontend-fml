@@ -3,11 +3,11 @@ import Countdown from "../../components/countdown/Countdown";
 import articles from '../../data/articles.json'
 import ArticleCard from "../../components/articleCard/ArticleCard";
 import { Link } from 'react-router-dom';
+import SortedArticles from "../../helpers/sortedArticles";
 
 
 function Home() {
-    const sortedArticles = articles.sort((a, b) => b.id - a.id);
-    const firstFiveArticles = sortedArticles.slice(0, 5);
+    const firstFiveArticles = SortedArticles(articles);
 
     return (
         <>
@@ -28,6 +28,7 @@ function Home() {
                 ))}
                 <Link to="/articles">View All Articles</Link>
             </section>
+
             <section>
                 <h2>Starfield</h2>
                 <h3>Countdown</h3>
