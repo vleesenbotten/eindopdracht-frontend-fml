@@ -10,6 +10,7 @@ function ArticlePost() {
     })
     return (
         <div>
+            <img src={`${currentArticle.image}`} alt="alt tag" width="600" height="300"/>
             <h1>{currentArticle.title}</h1>
             <h2>{currentArticle.date}</h2>
             <p>{currentArticle.content}</p>
