@@ -7,8 +7,6 @@ import isTokenValid from "../helpers/isTokenValid";
 export const AuthContext = createContext({});
 
 function AuthContextProvider({ children }) {
-    // ik ontvang hier een 404 op?
-    // const endpointAuth = "https://frontend-educational-backend.herokuapp.com/";
 
     const [isAuth, toggleIsAuth] = useState({
         isAuth: false,
@@ -39,6 +37,7 @@ function AuthContextProvider({ children }) {
         const decoded = jwt_decode(JWT);
         fetchUserData(decoded.sub, JWT, './profile');
         console.log("I work");
+        console.log(isAuth);
     }
 
     function logout() {
@@ -90,10 +89,9 @@ function AuthContextProvider({ children }) {
     }
 
     const data = {
-        isAuth: isAuth.isAuth,
-        user: isAuth.user,
-        userLogin: userLogin,
-        logout: logout,
+        ...isAuth,
+        userLogin,
+        logout
     };
 
     return (

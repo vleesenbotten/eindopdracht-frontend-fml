@@ -10,21 +10,21 @@ function Profile() {
     const [loading, toggleLoading] = useState(false);
 
     useEffect(() => {
-        async function fetchProfileData(){
-            toggleError(false);
-            toggleLoading(true);
-            try{
-                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user');
-                setUserData(result.data);
-                console.log(result.data)
-            } catch(e){
-                console.error(e);
-                toggleError(true);
-            }
-            toggleLoading(false);
-        };
+        // async function fetchProfileData(){
+        //     toggleError(false);
+        //     toggleLoading(true);
+        //     try{
+        //         const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user');
+        //         setUserData(result.data);
+        //         console.log(result.data)
+        //     } catch(e){
+        //         console.error(e);
+        //         toggleError(true);
+        //     }
+        //     toggleLoading(false);
+        // };
 
-        fetchProfileData();
+        // fetchProfileData();
     }, [])
 
     return (
