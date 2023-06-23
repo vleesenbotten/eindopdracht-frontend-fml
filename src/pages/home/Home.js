@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 function Home() {
-    const firstFiveArticles = articles.slice(0, 5);
+    const sortedArticles = articles.sort((a, b) => b.id - a.id);
+    const firstFiveArticles = sortedArticles.slice(0, 5);
 
     return (
         <>
@@ -22,6 +23,7 @@ function Home() {
                         date={article.date}
                         content={article.content}
                         tags={article.tags}
+                        id={article.id}
                     />
                 ))}
                 <Link to="/articles">View All Articles</Link>

@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-function ArticleCard({ title, date, content, tags }) {
+function ArticleCard({ title, date, content, tags, id }) {
     const articlePreview = content.slice(0, 400) + "...";
 
     return (
@@ -13,6 +14,7 @@ function ArticleCard({ title, date, content, tags }) {
                     <li key={tag.id}>{tag.name}</li>
                 ))}
             </ul>
+            <Link to={`/articles/${id}`}>read more</Link>
         </div>
     );
 }
