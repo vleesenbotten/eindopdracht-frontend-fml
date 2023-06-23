@@ -6,6 +6,7 @@ import Error from "../../components/error/Error";
 import Loading from "../../components/loading/Loading";
 
 function GameDetail() {
+    const apiKey = "bbf3b0834c524431ae361ae59491575b";
     const [game, setGame] = useState([]);
     const [gameSeries, setGameSeries] = useState([]);
     const [error, toggleError] = useState(false);
@@ -18,8 +19,8 @@ function GameDetail() {
                 toggleLoading(true);
                 toggleError(false);
                 const [gameResponse, gameSeriesResponse] = await Promise.all([
-                    axios.get(`https://api.rawg.io/api/games/${id}?key=bbf3b0834c524431ae361ae59491575b`),
-                    axios.get(`https://api.rawg.io/api/games/${id}/game-series?key=bbf3b0834c524431ae361ae59491575b`)
+                    axios.get(`https://api.rawg.io/api/games/${id}?key=${apiKey}`),
+                    axios.get(`https://api.rawg.io/api/games/${id}/game-series?key=${apiKey}`)
                 ]);
 
                 setGame(gameResponse.data);

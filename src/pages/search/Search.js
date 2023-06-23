@@ -6,6 +6,7 @@ import Error from "../../components/error/Error";
 import Loading from "../../components/loading/Loading";
 
 function Search() {
+    const apiKey = "bbf3b0834c524431ae361ae59491575b";
     const [gameData, setGameData] = useState([]);
     const [query, setQuery] = useState('');
     const [genre, setGenre] = useState("");
@@ -40,7 +41,7 @@ function Search() {
                 }
 
                 const result = await axios.get(
-                    'https://api.rawg.io/api/games?key=bbf3b0834c524431ae361ae59491575b',
+                    `https://api.rawg.io/api/games?key=${apiKey}`,
                     {
                         params: params,
                     }
