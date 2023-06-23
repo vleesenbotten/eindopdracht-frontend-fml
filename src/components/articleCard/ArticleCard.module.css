@@ -1,0 +1,27 @@
+.article_outer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 5px 10px 5px;
+    border: 1px solid black;
+}
+
+.article_image-wrapper{
+    flex: 0 1 auto;
+}
+
+.article_image{
+    max-width: 100%;
+    border: 1px solid greenyellow;
+}
+
+.article_ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.article_tag{
+    border: 1px solid black;
+    padding: 5px;
+}

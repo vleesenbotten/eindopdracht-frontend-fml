@@ -10,12 +10,13 @@ function Home() {
     const firstFiveArticles = SortedArticles(articles);
 
     return (
-        <section className={styles["home_outer-container"]}>
-            <h1>Welcome to the gunshow</h1>
-            <p>*kisses biceps*</p>
-            <p>Is this where the magic happens?</p>
-            <section className={styles["home_section-one"]}>
+        <section className={styles["home_container"]}>
+            {/*<h1>Welcome to the gunshow</h1>*/}
+            {/*<p>*kisses biceps*</p>*/}
+            {/*<p>Is this where the magic happens?</p>*/}
+            <section className={styles["home_section-news"]}>
                 <h1>Latest news</h1>
+                <article className={styles["home_section-one"]}>
                 {firstFiveArticles.map((article) => (
                     <ArticleCard
                         key={article.id}
@@ -23,10 +24,12 @@ function Home() {
                         date={article.date}
                         content={article.content}
                         tags={article.tags}
+                        image={article.image}
                         id={article.id}
                     />
                 ))}
                 <Link to="/articles">View All Articles</Link>
+                </article>
             </section>
 
             <section className={styles["home_section-two"]}>

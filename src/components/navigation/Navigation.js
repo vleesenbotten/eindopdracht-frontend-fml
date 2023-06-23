@@ -10,7 +10,7 @@ function Navigation() {
     return (
        <div className={styles["inner-content-container"]}>
         <nav className={styles["nav"]}>
-            <img src="https://via.placeholder.com/100x100" alt="logo"/>
+            <img src="https://via.placeholder.com/100x100" alt="logo" />
             <ul className={styles["nav_ul"]}>
                 {isAuth ?
                     <div className={styles["nav_authorized"]}>
