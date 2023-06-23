@@ -7,6 +7,8 @@ import Register from "./pages/register/Register";
 import Profile from "./pages/profile/Profile";
 import Search from "./pages/search/Search";
 import GameDetails from "./pages/gamedetails/GameDetails";
+import Articles from "./pages/articles/Articles";
+import ArticlePost from "./pages/articlepost/ArticlePost";
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/articles" element={<Articles/>} />
+            <Route path="/articles/:id" element={<ArticlePost/>} />
             <Route path="/game/:id" element={<GameDetails />} />
         </Routes>
       </>
