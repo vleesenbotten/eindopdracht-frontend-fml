@@ -4,6 +4,7 @@ import AuthForm from "../../components/authform/AuthForm";
 import InputElement from "../../components/inputelement/InputElement";
 import axios from "axios";
 import {AuthContext} from "../../context/AuthContext";
+import {Link} from "react-router-dom";
 
 function Login() {
     const { userLogin } = useContext(AuthContext);
@@ -65,6 +66,7 @@ function Login() {
                         required: "password is required",
                     }}
                 />
+                <p>don't have an account yet? <Link to={"/register"}>register here</Link></p>
             </AuthForm>
         </>
     );

@@ -1,13 +1,12 @@
-import React, {useContext, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {useForm} from "react-hook-form";
 import AuthForm from "../../components/authform/AuthForm";
 import InputElement from "../../components/inputelement/InputElement";
-// import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 import {useNavigate} from "react-router";
+import {Link} from "react-router-dom";
 
 function Register() {
-    // const {endpoint} = useContext((AuthContext));
     const navigate = useNavigate();
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
@@ -118,6 +117,7 @@ function Register() {
                                 value === password.current || "the passwords do not match"
                     }}
                 />
+                <p>already have an account? <Link to={"/login"}>login here</Link></p>
             </AuthForm>
         </>
     );
