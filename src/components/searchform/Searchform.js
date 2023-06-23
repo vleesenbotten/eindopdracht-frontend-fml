@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '../button/Button';
 import {useForm} from "react-hook-form";
 
 function Searchform({ handleSearch }) {
     const { register, handleSubmit } = useForm();
+    const [error, setError] = useState('');
 
     function onSubmit(data){
-        handleSearch(data.query, data.genres, data.tag, data.developers, data.platform);
+        if(data.query === ''){
+            setError('please fill in a keyword');
+        } else{
+            setError('');
+            handleSearch(data.query, data.genres, data.tag, data.developers, data.platform);
+        }
     }
 
     return (
@@ -72,6 +78,7 @@ function Searchform({ handleSearch }) {
                 <option value="14">xbox 360</option>
                 <option value="7">nintendo switch</option>
             </select>
+            {error && <p>{error}</p>}
             <Button type="submit" name="boom 🧨" />
         </form>
     );
