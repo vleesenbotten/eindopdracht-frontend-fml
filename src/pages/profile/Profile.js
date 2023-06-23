@@ -3,6 +3,7 @@ import {FavoriteContext} from "../../context/FavoriteContext";
 import axios from "axios";
 import Error from "../../components/error/Error";
 import {AuthContext} from "../../context/AuthContext";
+import Loading from "../../components/loading/Loading";
 
 function Profile() {
     const { favorites, isFavorite, toggleFavorite } = useContext(FavoriteContext);
@@ -28,7 +29,7 @@ function Profile() {
                 setUserData(result.data);
 
             } catch (e){
-                console.error(e)
+                console.error(e);
                 toggleError(true);
             }
             toggleLoading(false);
@@ -41,8 +42,8 @@ function Profile() {
         <>
             <img src="https://via.placeholder.com/150x150" alt="logo"/>
             {/*maybe make components of the loading/error?*/}
-            {error && <p>Error</p>}
-            {loading && <p>Loading...</p>}
+            {error && <Error/>}
+            {loading && <Loading/>}
 
             <h1>your private deetz</h1>
             <p>your username is</p>

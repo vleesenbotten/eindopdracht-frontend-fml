@@ -25,7 +25,8 @@
         "name": "nintendo switch"
       }
     ],
-    "date": "2023-01-10 15:30:22"
+    "date": "2023-01-10",
+    "image": "../images/image-spritifarer.jpeg"
   },
   {
     "id": "1",
@@ -37,7 +38,8 @@
         "name": "news"
       }
     ],
-    "date": "2023-01-26 16:30:22"
+    "date": "2023-01-26",
+    "image": "../images/image-header-standard.png"
   },
   {
     "id": "2",
@@ -49,7 +51,8 @@
         "name": "news"
       }
     ],
-    "date": "2023-02-03 12:35:22"
+    "date": "2023-02-03",
+    "image": "../images/image-header-standard.png"
   },
   {
     "id": "3",
@@ -61,7 +64,8 @@
         "name": "news"
       }
     ],
-    "date": "2023-02-15 21:20:22"
+    "date": "2023-02-15",
+    "image": "../images/image-header-standard.png"
   },
   {
     "id": "4",
@@ -73,7 +77,7 @@
         "name": "news"
       }
     ],
-    "date": "2023-03-02 10:10:24"
+    "date": "2023-03-02"
   },
   {
     "id": "5",
@@ -97,7 +101,8 @@
         "name": "playstation"
       }
     ],
-    "date": "2023-05-26 16:30:22"
+    "date": "2023-05-26",
+    "image": "../images/image-gollum.jpeg"
   },
   {
     "id": "6",
@@ -113,7 +118,8 @@
         "name": "retro gaming"
       }
     ],
-    "date": "2023-05-29 11:15:22"
+    "date": "2023-05-29",
+    "image": "../images/image-baldurs-gate-one.jpg"
   },
   {
     "id": "8",
@@ -129,7 +135,8 @@
         "name": "retro gaming"
       }
     ],
-    "date": "2023-06-01 10:30:22"
+    "date": "2023-06-01",
+    "image": "../images/image-header-standard.png"
   },
   {
     "id": "9",
@@ -153,7 +160,8 @@
         "name": "playstation"
       }
     ],
-    "date": "2023-06-10 09:30:22"
+    "date": "2023-06-10",
+    "image": "../images/image-tiny-tina-wonderlands.jpg"
   },
   {
     "id": "10",
@@ -169,6 +177,7 @@
         "name": "game-review"
       }
     ],
-    "date": "2023-06-20 13:30:22"
+    "date": "2023-06-20",
+    "image": "../images/image-animal-crossing.jpg"
   }
 ]
