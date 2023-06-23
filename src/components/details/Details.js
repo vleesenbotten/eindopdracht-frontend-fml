@@ -10,16 +10,16 @@ function Details({ game, gameSeries }) {
     return (
         <article>
             <img src={game.background_image} alt={game.name} width="600" height="300"/>
-            <h1>{game.name}</h1>
-            <p>Metacritic: {game.metacritic}</p>
+            <h2>{game.name}</h2>
+            <h3>Metacritic: {game.metacritic}</h3>
             <span>
-                <p>Ratings:</p>
+                <h3>Ratings:</h3>
                 {game.ratings && game.ratings.map((rating) => (
                     <p key={rating.id}>{rating.percent} {rating.title}</p>
                 ))}
             </span>
             <span>
-                <p>Genres:</p>
+                <h3>Genres:</h3>
                 {game.genres && game.genres.map((genre) => (
                     <p key={genre.id}>{genre.name}</p>
                 ))}
@@ -48,7 +48,6 @@ function Details({ game, gameSeries }) {
                 {isFavorite(game.id) ? '</3' : '<3'}
             </button>
             <div>
-                <img src="https://via.placeholder.com/100x100" alt="logo" />
                 <p>Games from the series here:</p>
                 {gameSeries.length > 0 ? (
                     <ul>

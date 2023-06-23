@@ -7,7 +7,7 @@ function ArticleCard({ title, date, content, tags, id }) {
     return (
         <div>
             <h2>{title}</h2>
-            <p>{date}</p>
+            <h3>{date}</h3>
             <p>{articlePreview}</p>
             <ul>
                 {tags.map((tag) => (
