@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Details from "../../components/details/Details";
 import Error from "../../components/error/Error";
+import Loading from "../../components/loading/Loading";
 
 function GameDetail() {
     const [game, setGame] = useState([]);
@@ -35,7 +36,7 @@ function GameDetail() {
 
     return (
         <>
-            {loading && <p>Loading...</p>}
+            {loading && <Loading/>}
             {error && <Error message="Failed to fetch game details." />}
             <Details key={game.id} game={game} gameSeries={gameSeries} />
         </>

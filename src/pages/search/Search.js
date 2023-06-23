@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Searchform from '../../components/searchform/Searchform';
 import Card from '../../components/card/Card';
+import Error from "../../components/error/Error";
+import Loading from "../../components/loading/Loading";
 
 function Search() {
     const [gameData, setGameData] = useState([]);
@@ -10,23 +12,30 @@ function Search() {
     const [tag, setTag] = useState("");
     const [developer, setDeveloper] = useState("");
     const [platform, setPlatform] = useState("");
+    const [error, toggleError] = useState(false);
+    const [loading, toggleLoading] = useState(false);
 
     useEffect(() => {
         async function fetchGameData() {
             try {
-                // initial values for my axios.get request
+                toggleLoading(true);
+                toggleError(false);
+
                 const params = {
                     search: query,
                     page_size: 25,
                 }
-                // the conditional statements ensure that the filter options can be left empty
-                if(genre){
+
+                if (genre) {
                     params.genres = genre;
-                } if(tag){
+                }
+                if (tag) {
                     params.tags = tag;
-                } if(developer){
+                }
+                if (developer) {
                     params.developers = developer;
-                } if(platform){
+                }
+                if (platform) {
                     params.platforms = platform;
                 }
 
@@ -36,35 +45,36 @@ function Search() {
                         params: params,
                     }
                 );
+
                 setGameData(result.data);
                 console.log(result.data.results);
             } catch (e) {
                 console.error(e);
+                toggleError(true);
             }
+                toggleLoading(false);
         }
 
         if (query) {
             fetchGameData();
         }
-    }, [query, genre]);
+    }, [query, genre, tag, developer, platform]);
 
     return (
         <>
             <h1>*is this thing on?*</h1>
-            <Searchform
-                handleSearch={setQuery}
-            />
+            {loading && <Loading/>}
+            <Searchform handleSearch={setQuery} />
             {Object.keys(gameData).length > 0 && (
                 <>
                     {gameData.results && gameData.results.length > 0 ? (
-                        gameData.results.map((game) => (
-                            <Card key={game.id} game={game} />
-                        ))
+                        gameData.results.map((game) => <Card key={game.id} game={game} />)
                     ) : (
                         <p>no results found.</p>
                     )}
                 </>
             )}
+            {error && <Error message="Failed to fetch game details." />}
         </>
     );
 }
