@@ -17,21 +17,26 @@ function App() {
 
   return (
       <>
-        <div className={styles["outer-content-container"]}>
+        <header className={styles["outer-content-container"]}>
             <Navigation/>
-        </div>
-          <div className={styles["outer-content-container"]}>
+        </header>
+          <main className={styles["outer-content-container"]}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/profile" element={isAuth ? <Profile/> : <Navigate to="/login"/>}/>
-                <Route path="/search" element={isAuth ? <Search/> : <Navigate to="/login"/>} />
-                <Route path="/articles" element={isAuth ? <Articles/> : <Navigate to="/login"/>} />
-                <Route path="/articles/:id" element={isAuth ? <ArticlePost/> : <Navigate to="/login"/>} />
-                <Route path="/game/:id" element={isAuth ? <GameDetails/> : <Navigate to="/login"/>} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/articles" element={<Articles />} />
+                <Route path="/articles/:id" element={<ArticlePost />} />
+                <Route path="/game/:id" element={<GameDetails />} />
+                {/*<Route path="/profile" element={isAuth ? <Profile/> : <Navigate to="/login"/>}/>*/}
+                {/*<Route path="/search" element={isAuth ? <Search/> : <Navigate to="/login"/>} />*/}
+                {/*<Route path="/articles" element={isAuth ? <Articles/> : <Navigate to="/login"/>} />*/}
+                {/*<Route path="/articles/:id" element={isAuth ? <ArticlePost/> : <Navigate to="/login"/>} />*/}
+                {/*<Route path="/game/:id" element={isAuth ? <GameDetails/> : <Navigate to="/login"/>} />*/}
             </Routes>
-        </div>
+        </main>
       </>
   );
 }

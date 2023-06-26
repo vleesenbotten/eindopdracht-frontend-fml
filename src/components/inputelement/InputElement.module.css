@@ -1,0 +1,24 @@
+.input_label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_field{
+    font-family: 'Inconsolata', monospace;
+    padding: 5px;
+    border: 1px solid black;
+    width: 200px;
+}
+
+.input_field::placeholder{
+    color: rgba(19, 19, 19, 0.9);
+}
+
+.input_field:focus{
+    background: linear-gradient(to right, #ffcccc, #cc99ff);
+}
+
+.input_error{
+    color: red;
+}

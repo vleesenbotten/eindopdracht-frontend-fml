@@ -21,6 +21,12 @@ function Navigation() {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink to="/about"
+                                     className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
+                                about
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/profile"
                                      className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
                                 profile
@@ -36,6 +42,18 @@ function Navigation() {
                     </div>
                     :
                     <div className={styles["nav_not-authorized"]}>
+                        <li>
+                            <NavLink to="/"
+                                     className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
+                                home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about"
+                                     className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
+                                about
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink to="/login"
                                      className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>

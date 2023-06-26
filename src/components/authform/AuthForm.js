@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 function AuthForm({clickHandler, children, text, error, loading}) {
     return (
-        <div>
+        <div className={ styles["test"]}>
             <form onSubmit={clickHandler} className={ styles["form"]}>
                 <h1>{text}</h1>
                 {children}
