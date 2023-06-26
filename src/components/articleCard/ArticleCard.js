@@ -10,9 +10,9 @@ function ArticleCard({title, date, content, tags, id, image, icon}) {
                 <span className={styles["article_image-wrapper"]}>
               <img src={`${image}`} alt="alt tag" className={styles["article_image"]}/>
             </span>
+                <h2 className={styles["article_h2"]}>{title}</h2>
                 <span className={styles["article_text-constrictor"]}>
-                <h2>{title}</h2>
-                <h3>{date}</h3>
+                    <h3>{date}</h3>
                 <p>{articlePreview}</p>
             <Link to={`/articles/${id}`}>read more</Link>
             <ul className={styles["article_ul"]}>
