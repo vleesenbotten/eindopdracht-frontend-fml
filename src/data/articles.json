@@ -6,7 +6,8 @@
     "tags": [
       {
         "id": 1,
-        "name": "game-review"
+        "name": "game-review",
+        "icon": "public/icons/gamereview.svg"
       },
       {
         "id": 3,
@@ -26,7 +27,7 @@
       }
     ],
     "date": "2023-01-10",
-    "image": "../images/image-spritifarer.jpeg"
+    "image": "/images/image-spritifarer.jpeg"
   },
   {
     "id": "1",

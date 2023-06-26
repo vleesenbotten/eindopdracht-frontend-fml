@@ -25,6 +25,7 @@ function Home() {
                         content={article.content}
                         tags={article.tags}
                         image={article.image}
+                        icon={article.icon}
                         id={article.id}
                     />
                 ))}
