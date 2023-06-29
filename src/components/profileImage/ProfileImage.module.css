@@ -1,0 +1,62 @@
+.profile-image_smiley-face{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ffcccc, #cc99ff);
+    padding:10px;
+}
+
+.profile-image_face{
+    border: 1px solid black;
+    background: linear-gradient(to bottom, #FFCD47, #ffcccc);
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 110px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.profile-image_eyes{
+    display: flex;
+    /*border: 1px solid red;*/
+    justify-content: space-between;
+    align-items:center;
+    width: 60%;
+}
+
+.profile-image_eye{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: black;
+}
+
+.profile-image_mouth{
+    position: relative;
+    width: 32px;
+    height: 20px;
+    background: black;
+    border-radius: 20px 20px 60px 60px;
+}
+
+.profile-image_mouth::before{
+    content: "";
+    position: absolute;
+    background: #ffcccc;
+    width: 20px;
+    height: 10px;
+    border-radius: 60%;
+    bottom: 2px;
+    /*trick to get perfect middle of absolute designs!*/
+    left: 50%;
+    transform: translateX(-50%);
+}

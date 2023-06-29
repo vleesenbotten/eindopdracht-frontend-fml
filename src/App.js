@@ -10,14 +10,14 @@ import Search from "./pages/search/Search";
 import GameDetails from "./pages/gamedetails/GameDetails";
 import Articles from "./pages/articles/Articles";
 import ArticlePost from "./pages/articlepost/ArticlePost";
-import styles from "./components/navigation/Navigation.module.css";
+import styles from "./App.module.css";
 
 function App() {
     const { isAuth } = useContext(AuthContext);
 
   return (
       <>
-        <header className={styles["outer-content-container"]}>
+        <header>
             <Navigation/>
         </header>
           <main className={styles["outer-content-container"]}>
@@ -25,16 +25,11 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/search" element={<Search />} />
-                <Route path="/articles" element={<Articles />} />
-                <Route path="/articles/:id" element={<ArticlePost />} />
-                <Route path="/game/:id" element={<GameDetails />} />
-                {/*<Route path="/profile" element={isAuth ? <Profile/> : <Navigate to="/login"/>}/>*/}
-                {/*<Route path="/search" element={isAuth ? <Search/> : <Navigate to="/login"/>} />*/}
-                {/*<Route path="/articles" element={isAuth ? <Articles/> : <Navigate to="/login"/>} />*/}
-                {/*<Route path="/articles/:id" element={isAuth ? <ArticlePost/> : <Navigate to="/login"/>} />*/}
-                {/*<Route path="/game/:id" element={isAuth ? <GameDetails/> : <Navigate to="/login"/>} />*/}
+                <Route path="/profile" element={isAuth ? <Profile/> : <Navigate to="/login"/>}/>
+                <Route path="/search" element={isAuth ? <Search/> : <Navigate to="/login"/>} />
+                <Route path="/articles" element={isAuth ? <Articles/> : <Navigate to="/login"/>} />
+                <Route path="/articles/:id" element={isAuth ? <ArticlePost/> : <Navigate to="/login"/>} />
+                <Route path="/game/:id" element={isAuth ? <GameDetails/> : <Navigate to="/login"/>} />
             </Routes>
         </main>
       </>

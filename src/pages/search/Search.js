@@ -4,6 +4,8 @@ import Searchform from '../../components/searchform/Searchform';
 import Card from '../../components/card/Card';
 import Error from "../../components/error/Error";
 import Loading from "../../components/loading/Loading";
+import styles from "./Search.module.css";
+import Background from "../../components/background/Background";
 
 function Search() {
     const apiKey = "bbf3b0834c524431ae361ae59491575b";
@@ -24,7 +26,7 @@ function Search() {
 
                 const params = {
                     search: query,
-                    page_size: 25,
+                    page_size: 10,
                 }
 
                 if (genre) {
@@ -62,21 +64,22 @@ function Search() {
     }, [query, genre, tag, developer, platform]);
 
     return (
-        <>
-            <h1>*is this thing on?*</h1>
+        <section className={styles["search_outer-container"]}>
+            <h1>search for games</h1>
             {loading && <Loading/>}
             <Searchform handleSearch={setQuery} />
-            {Object.keys(gameData).length > 0 && (
-                <>
-                    {gameData.results && gameData.results.length > 0 ? (
-                        gameData.results.map((game) => <Card key={game.id} game={game} />)
-                    ) : (
-                        <p>no results found.</p>
-                    )}
-                </>
-            )}
-            {error && <Error message="Failed to fetch game details." />}
-        </>
+                {Object.keys(gameData).length > 0 && (
+                    <section className={styles["search_cards-container"]}>
+                        {gameData.results && gameData.results.length > 0 ? (
+                            gameData.results.map((game) => <Card key={game.id} game={game} />)
+                        ) : (
+                            <p>no results found.</p>
+                        )}
+                    </section>
+                )}
+            <Background />
+            {error && <Error message="something went wrong :(" />}
+        </section>
     );
 }
 

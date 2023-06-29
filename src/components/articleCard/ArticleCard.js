@@ -14,10 +14,10 @@ function ArticleCard({title, date, content, tags, id, image, icon}) {
                 <span className={styles["article_text-constrictor"]}>
                     <h3>{date}</h3>
                 <p>{articlePreview}</p>
-            <Link to={`/articles/${id}`}>read more</Link>
+            <Link to={`/articles/${id}`} className={styles["article_text-link"]}>read more</Link>
             <ul className={styles["article_ul"]}>
                 {tags.map((tag) => (<li key={tag.id} className={styles["article_tag"]}>
-                        <span className={styles["articles_test"]}>
+                        <span className={styles["articles_tags"]}>
                         <img src={`${tag.icon}`} alt={tag.name} width={30}/>
                             {tag.name}
                         </span>

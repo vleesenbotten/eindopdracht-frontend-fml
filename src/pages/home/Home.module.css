@@ -1,6 +1,6 @@
 .home_container {
     display: flex;
-    flex: 0 1 auto;
+    flex: 0 1 1200px;
     flex-direction: row;
     justify-content: center;
     /*border: 1px solid deeppink;*/
@@ -48,7 +48,7 @@
     border: 1px solid black;
 }
 
-h2,h3.home_heading-color{
+.home_heading-color{
     padding: 0 10px 0 10px;
     background: linear-gradient(to right, #ffcccc, #cc99ff);
 }

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Details from "../../components/details/Details";
 import Error from "../../components/error/Error";
 import Loading from "../../components/loading/Loading";
+import styles from "./GameDetails.module.css";
 
 function GameDetail() {
     const apiKey = "bbf3b0834c524431ae361ae59491575b";
@@ -36,11 +37,11 @@ function GameDetail() {
     }, [id]);
 
     return (
-        <>
+        <section className={styles["game-details_container"]}>
             {loading && <Loading/>}
             {error && <Error message="Failed to fetch game details." />}
             <Details key={game.id} game={game} gameSeries={gameSeries} />
-        </>
+        </section>
     );
 }
 

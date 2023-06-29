@@ -1,0 +1,10 @@
+.error_div{
+    padding: 5px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.error_div p{
+    font-weight: bold;
+    font-size: 14px;
+}

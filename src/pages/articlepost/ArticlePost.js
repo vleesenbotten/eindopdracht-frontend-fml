@@ -1,6 +1,7 @@
 import React from 'react';
 import articles from "../../data/articles.json";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import styles from "./ArticlePost.module.css"
 
 function ArticlePost() {
     const { id } = useParams();
@@ -9,17 +10,29 @@ function ArticlePost() {
         return article.id === id;
     })
     return (
-        <div>
-            <img src={`${currentArticle.image}`} alt="alt tag" width="600" height="300"/>
-            <h1>{currentArticle.title}</h1>
-            <h2>{currentArticle.date}</h2>
-            <p>{currentArticle.content}</p>
-            <ul>
-                {currentArticle.tags.map((tag) => (
-                    <li key={tag.id}>{tag.name}</li>
-                ))}
-            </ul>
-        </div>
+        <section className={styles["article-post_container"]}>
+            <article className={styles["article-post_article"]}>
+                <span className={styles["article-post_image-wrapper"]}>
+                <img src={`${currentArticle.image}`} alt="alt tag" className={styles["article-post_image"]}/>
+                </span>
+                <h1 className={styles["article-post_heading-one"]}>{currentArticle.title}</h1>
+                <section className={styles["article-post_section"]}>
+                    <h2 className={styles["article-post_head-two"]}>{currentArticle.date}</h2>
+                    <p>{currentArticle.content}</p>
+                    <Link to={'/'}>back to home</Link>
+                    <ul className={styles["article-post_ul"]}>
+                        {currentArticle.tags.map((tag) => (
+                            <li key={tag.id} className={styles["article-post_tag"]}>
+                        <span className={styles["article-post_tags"]}>
+                        <img src={`${tag.icon}`} alt={tag.name} width={30}/>
+                            {tag.name}
+                        </span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            </article>
+        </section>
     );
 }
 

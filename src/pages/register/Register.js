@@ -76,22 +76,22 @@ function Register() {
                     }
                     }
                 />
-                {/*<InputElement*/}
-                {/*    errors={errors}*/}
-                {/*    register={register}*/}
-                {/*    required*/}
-                {/*    name="info"*/}
-                {/*    inputType="text"*/}
-                {/*    placeholder="cool fact about yourself"*/}
-                {/*    validationRules={{*/}
-                {/*        required: "cool fact is required",*/}
-                {/*        minLength: {*/}
-                {/*            value: 8,*/}
-                {/*            message: "tell a bit more than that"*/}
-                {/*        }*/}
-                {/*    }*/}
-                {/*    }*/}
-                {/*/>*/}
+                <InputElement
+                    errors={errors}
+                    register={register}
+                    required
+                    name="info"
+                    inputType="text"
+                    placeholder="cool fact about yourself"
+                    validationRules={{
+                        required: "cool fact is required",
+                        minLength: {
+                            value: 8,
+                            message: "tell a bit more than that"
+                        }
+                    }
+                    }
+                />
                 <InputElement
                     errors={errors}
                     register={register}
