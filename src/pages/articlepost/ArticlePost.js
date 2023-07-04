@@ -19,7 +19,7 @@ function ArticlePost() {
                 <section className={styles["article-post_section"]}>
                     <h2 className={styles["article-post_head-two"]}>{currentArticle.date}</h2>
                     <p>{currentArticle.content}</p>
-                    <Link to={'/'}>back to home</Link>
+                    <Link to={'/'} className={styles["article-post-head-link"]}>back to home</Link>
                     <ul className={styles["article-post_ul"]}>
                         {currentArticle.tags.map((tag) => (
                             <li key={tag.id} className={styles["article-post_tag"]}>

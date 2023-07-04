@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Countdown from "../../components/countdown/Countdown";
 import ArticleCard from "../../components/articleCard/ArticleCard";
+import TopFive from "../../components/topfive/TopFive";
 import SortedArticles from "../../helpers/sortedArticles";
 import Button from "../../components/button/Button";
 import styles from "./Home.module.css";
@@ -37,26 +38,16 @@ function Home() {
                     <span className={styles["text-constrictor"]}>
                         <h3>Starfield Countdown</h3>
                         <Countdown/>
-                        <p>are you as excited as we are about starfield? but do you tire from googling 'how many days more until starfield release' anxiously everyday? fret no more! with this handy dandy countdown we bring the anxiety to you! </p>
+                        <p>Are you as excited as we are about Starfield? But do you tire from anxiously googling 'how many days more until Starfield release' every single day? Fret no more! With this handy dandy countdown we bring the anxiety to you! </p>
                     </span>
                 </article>
                 <article className={styles["home_top-five"]}>
-                    <h2 className={styles["home_heading-color"]}>🔥Our Top Five Games🔥</h2>
-                    <span className={styles["text-constrictor"]}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores eligendi id minus natus, neque nihil porro quam tempore voluptatem.</p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                    </ul>
-                    </span>
+                    <TopFive/>
                 </article>
                 <article className={styles["home_newsletter"]}>
-                    <h3 className={styles["home_heading-color"]}>never miss any news</h3>
+                    <h3 className={styles["home_heading-color"]}>Never miss any news</h3>
                     <span className={styles["text-constrictor"]}>
-                    <p>sign up for our newsletter, it's free!</p>
+                    <p>Sign up for our newsletter, it's free!</p>
                     <input type="text" placeholder="supercool@email.com"/>
                     <Button type="submit"
                             name="boom!"/>

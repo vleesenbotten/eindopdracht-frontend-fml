@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import styles from "./Details.module.css";
 import FavoriteButton from "../favoritebuton/FavoriteButton";
 
-function Details({game, gameSeries, errors}) {
+function Details({game, gameSeries}) {
 
     return (
         <article className={styles["details-post_article"]}>
@@ -14,18 +14,18 @@ function Details({game, gameSeries, errors}) {
             <h2 className={styles["details-post_heading-two"]}>{game.name}</h2>
             <section className={styles["details_section-one"]}>
                 {game.metacritic && game.metacritic !== 0 ? (
-                    <h3>Metacritic: {game.metacritic}</h3>
+                    <h3>metacritic {game.metacritic}</h3>
                     )
                     :
                     (
                     <h3>No Metacritic Score</h3>
                     )}
                 <span>
-                <h3>Genres:</h3>
+                <h3>genres</h3>
                     {game.genres && game.genres.map((genre) => (<p key={genre.id}>{genre.name}</p>))}
                 </span>
                 <span>
-                <h3>Ratings:</h3>
+                <h3>ratings</h3>
                     {game.ratings && game.ratings.map((rating) => (
                         <p key={rating.id}>{rating.percent} {rating.title}</p>))}
                 </span>
@@ -64,7 +64,7 @@ function Details({game, gameSeries, errors}) {
             <section className={styles["details_section-four"]}>
                 {gameSeries.length > 0 ? (
                     <ul className={styles["details_section-four_ul"]}>
-                        <p>related games:</p>
+                        <p>related games</p>
                         {gameSeries.map((series) => (
                             <li key={series.id} className={styles["details_section-four_li"]}>
                                 <Link to={`/game/${series.id}`} className={styles["details_tags"]}>{series.name}</Link>

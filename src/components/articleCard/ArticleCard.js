@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import styles from "../articleCard/ArticleCard.module.css";
 
-function ArticleCard({title, date, content, tags, id, image, icon}) {
+function ArticleCard({title, date, content, tags, id, image}) {
     const articlePreview = content.slice(0, 400) + "...";
 
     return (<article className={styles["article_outer-container"]}>

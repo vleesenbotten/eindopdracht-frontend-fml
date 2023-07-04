@@ -11,11 +11,6 @@ function Navigation() {
     return (
         <nav className={styles["nav"]}>
             <span className={styles['nav_image-wrapper']}>
-              {/*<img*/}
-              {/*    src="https://via.placeholder.com/100x100"*/}
-              {/*    alt="logo"*/}
-              {/*    className={styles['nav_image']}*/}
-              {/*/>*/}
                 <Logo/>
             </span>
             <ul className={styles["nav_ul"]}>
