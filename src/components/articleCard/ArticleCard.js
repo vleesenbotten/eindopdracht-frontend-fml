@@ -8,7 +8,7 @@ function ArticleCard({title, date, content, tags, id, image}) {
     return (<article className={styles["article_outer-container"]}>
             <div className={styles["article_inner-container"]}>
                 <span className={styles["article_image-wrapper"]}>
-              <img src={`${image}`} alt="alt tag" className={styles["article_image"]}/>
+              <img src={`${image}`} alt={title} className={styles["article_image"]}/>
             </span>
                 <h2 className={styles["article_h2"]}>{title}</h2>
                 <span className={styles["article_text-constrictor"]}>

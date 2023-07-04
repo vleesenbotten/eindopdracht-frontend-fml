@@ -1,7 +1,6 @@
 import React from 'react';
 import Background from '../../components/background/Background';
 import styles from './About.module.css';
-import Logo from "../../components/logo/Logo";
 
 function About() {
 

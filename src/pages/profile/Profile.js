@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FavoriteContext } from '../../context/FavoriteContext';
 import axios from 'axios';
 import Error from '../../components/error/Error';
+import { FavoriteContext } from '../../context/FavoriteContext';
 import { AuthContext } from '../../context/AuthContext';
 import Loading from '../../components/loading/Loading';
 import Background from '../../components/background/Background';
-import styles from './Profile.module.css';
 import FavoriteButton from "../../components/favoritebuton/FavoriteButton";
 import ProfileImage from "../../components/profileImage/ProfileImage";
+import styles from './Profile.module.css';
 
 function Profile() {
     const { favorites } = useContext(FavoriteContext);
