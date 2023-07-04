@@ -6,27 +6,32 @@
     "tags": [
       {
         "id": 1,
-        "name": "game-review"
+        "name": "game-review",
+        "icon": "../icons/gameicons/gamereview.svg"
       },
       {
         "id": 3,
-        "name": "pc"
+        "name": "pc",
+        "icon": "../icons/gameicons/pc.svg"
       },
       {
         "id": 4,
-        "name": "xbox"
+        "name": "xbox",
+        "icon": "../icons/gameicons/xbox.svg"
       },
       {
         "id": 5,
-        "name": "playstation"
+        "name": "playstation",
+        "icon": "../icons/gameicons/playstation.svg"
       },
       {
         "id": 6,
-        "name": "nintendo switch"
+        "name": "nintendo switch",
+        "icon": "../icons/gameicons/switch.svg"
       }
     ],
     "date": "2023-01-10",
-    "image": "../images/image-spritifarer.jpeg"
+    "image": "/images/image-spritifarer.jpeg"
   },
   {
     "id": "1",
@@ -35,7 +40,8 @@
     "tags": [
       {
         "id": 2,
-        "name": "news"
+        "name": "news",
+        "icon": "../icons/gameicons/news.svg"
       }
     ],
     "date": "2023-01-26",
@@ -48,7 +54,8 @@
     "tags": [
       {
         "id": 2,
-        "name": "news"
+        "name": "news",
+        "icon": "../icons/gameicons/news.svg"
       }
     ],
     "date": "2023-02-03",
@@ -61,7 +68,8 @@
     "tags": [
       {
         "id": 2,
-        "name": "news"
+        "name": "news",
+        "icon": "../icons/gameicons/news.svg"
       }
     ],
     "date": "2023-02-15",
@@ -74,10 +82,12 @@
     "tags": [
       {
         "id": 2,
-        "name": "news"
+        "name": "news",
+        "icon": "../icons/gameicons/news.svg"
       }
     ],
-    "date": "2023-03-02"
+    "date": "2023-03-02",
+    "image": "../images/image-header-standard.png"
   },
   {
     "id": "5",
@@ -86,19 +96,23 @@
     "tags": [
       {
         "id": 1,
-        "name": "game-review"
+        "name": "game-review",
+        "icon": "../icons/gameicons/gamereview.svg"
       },
       {
         "id": 3,
-        "name": "pc"
+        "name": "pc",
+        "icon": "../icons/gameicons/pc.svg"
       },
       {
         "id": 4,
-        "name": "xbox"
+        "name": "xbox",
+        "icon": "../icons/gameicons/xbox.svg"
       },
       {
         "id": 5,
-        "name": "playstation"
+        "name": "playstation",
+        "icon": "../icons/gameicons/playstation.svg"
       }
     ],
     "date": "2023-05-26",
@@ -111,11 +125,13 @@
     "tags": [
       {
         "id": 1,
-        "name": "game-review"
+        "name": "game-review",
+        "icon": "../icons/gameicons/gamereview.svg"
       },
       {
         "id": 8,
-        "name": "retro gaming"
+        "name": "retro gaming",
+        "icon": "../icons/gameicons/retro.svg"
       }
     ],
     "date": "2023-05-29",
@@ -128,11 +144,13 @@
     "tags": [
       {
         "id": 7,
-        "name": "console review"
+        "name": "console review",
+        "icon": "../icons/gameicons/console.svg"
       },
       {
         "id": 8,
-        "name": "retro gaming"
+        "name": "retro gaming",
+        "icon": "../icons/gameicons/retro.svg"
       }
     ],
     "date": "2023-06-01",
@@ -145,19 +163,23 @@
     "tags": [
       {
         "id": 1,
-        "name": "game-review"
+        "name": "game-review",
+        "icon": "../icons/gameicons/gamereview.svg"
       },
       {
         "id": 3,
-        "name": "pc"
+        "name": "pc",
+        "icon": "../icons/gameicons/pc.svg"
       },
       {
         "id": 4,
-        "name": "xbox"
+        "name": "xbox",
+        "icon": "../icons/gameicons/xbox.svg"
       },
       {
         "id": 5,
-        "name": "playstation"
+        "name": "playstation",
+        "icon": "../icons/gameicons/playstation.svg"
       }
     ],
     "date": "2023-06-10",
@@ -170,11 +192,13 @@
     "tags": [
       {
         "id": 2,
-        "name": "news"
+        "name": "news",
+        "icon": "../icons/gameicons/news.svg"
       },
       {
         "id": 1,
-        "name": "game-review"
+        "name": "game-review",
+        "icon": "../icons/gameicons/gamereview.svg"
       }
     ],
     "date": "2023-06-20",

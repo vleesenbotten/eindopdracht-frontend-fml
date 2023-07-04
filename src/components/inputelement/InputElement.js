@@ -13,7 +13,7 @@ function InputElement({name, inputType, placeholder, register, validationRules, 
                     placeholder={placeholder}
                     {...register(name, validationRules)}
                 />
-                {errors[name] && <p>{errors[name].message}</p>}
+                {errors[name] && <p className={styles["input_error"]}>{errors[name].message}</p>}
             </label>
         </>
     );

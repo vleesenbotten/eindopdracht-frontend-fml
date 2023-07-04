@@ -5,6 +5,8 @@ import InputElement from "../../components/inputelement/InputElement";
 import axios from "axios";
 import {useNavigate} from "react-router";
 import {Link} from "react-router-dom";
+import styles from "./Register.module.css"
+import Background from "../../components/background/Background";
 
 function Register() {
     const navigate = useNavigate();
@@ -36,9 +38,10 @@ function Register() {
     }
 
     return (
-        <>
+        <section className={styles["register_container"]}>
+            <Background/>
             <AuthForm clickHandler={handleSubmit(requestRegister)}
-                      text="Register"
+                      text="register"
                       error={error && <span>This account already exists. Try a different e-mail.</span>}
                       loading={loading && <span>Loading...</span>}
             >
@@ -119,7 +122,7 @@ function Register() {
                 />
                 <p>already have an account? <Link to={"/login"}>login here</Link></p>
             </AuthForm>
-        </>
+        </section>
     );
 }
 

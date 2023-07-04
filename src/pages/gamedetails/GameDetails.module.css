@@ -1,0 +1,6 @@
+.game-details_container{
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+}

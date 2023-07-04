@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mr+Dafoe&display=swap');
+
+.logo-image_outer-container{
+    position: relative;
+}
+
+.logo-image_smiley-face{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80px;
+    height: 100px;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ffcccc, #cc99ff);
+    padding: 10px;
+}
+
+.logo-image_face{
+    border: 1px solid black;
+    background: linear-gradient(to bottom, #FFCD47, #ffcccc);
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.logo-image_eyes{
+    display: flex;
+    /*border: 1px solid red;*/
+    justify-content: space-between;
+    align-items:center;
+    width: 60%;
+}
+
+.logo-image_eye{
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background: black;
+}
+
+.logo-image_mouth{
+    position: relative;
+    width: 22px;
+    height: 10px;
+    background: black;
+    border-radius: 30px 30px 60px 60px;
+}
+
+.logo-image_mouth::before{
+    content: "";
+    position: absolute;
+    background: #ffcccc;
+    width: 10px;
+    height: 5px;
+    border-radius: 60%;
+    bottom: 0.5px;
+    /*trick to get perfect middle of absolute designs!*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-image_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding-left: 39px;
+    padding-bottom: 5px;
+
+}
+
+.logo-image_body-round{
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: black;
+    border: 2px solid black;
+}
+
+.logo-image_body-round_test{
+    display: flex;
+    gap: 3px;
+}
+
+.logo-image_touchpad{
+    position: absolute;
+}
+
+.logo-image_touchpad::before{
+    content:"";
+    width: 10px;
+    position: absolute;
+    transform: translate(-280%, 100%);
+    border: 2px solid black;
+    border-radius:50px;
+}
+
+.logo-image_touchpad::after{
+    content:"";
+    height: 10px;
+    position: absolute;
+    transform: translate(-850%, -5%);
+    border:2px solid black;
+    border-radius: 50px;
+}
+
+.logo-letters_container{
+    z-index: 2;
+    position: absolute;
+    top: 35%;
+    left: 180%;
+    /*border: 1px solid red;*/
+}
+
+.logo-letters_neon{
+    position: absolute;
+    z-index: 1;
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 50px;
+    font-weight: 100;
+    color: #8c1eff;
+    filter: drop-shadow(0 0 30px #8c1eff);
+    line-height: 1;
+    top: -25%;
+    transform: rotateZ(-10deg);
+    transform-origin: center left;
+}
+
+.logo-letters_synth{
+     z-index: -1;
+     display: inline-block;
+     font-size: 60px;
+     font-family: 'Archivo Black', sans-serif;
+     text-transform: uppercase;
+     letter-spacing: .065em;
+     position: relative;
+     left: -15%;
+ }
+
+.logo-letters_synth::before {
+    display: block;
+    content: "Press";
+    opacity: 0.6;
+    font-weight: 600;
+    left: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+     text-shadow: 0 0 50px #8c1eff;
+     background: linear-gradient(206deg, #cc99ff 0%, #ffcccc 20%, #cc99ff 40%, #b7e3fe 60%, #3346bc 80%, #ffcccc 100%);
+     -webkit-text-stroke: 10px transparent;
+     -webkit-background-clip: text;
+     color:transparent;
+}
+
+.logo-letters_synth::after{
+    display: block;
+    content: "Press";
+    opacity: 0.6;
+    font-weight: 600;
+    left: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-image: linear-gradient(to bottom, black 0%, #49034d 33%, white 45%, black 45%, #7f158f 66%, white 85%);
+    -webkit-background-clip: text;
+    color: transparent;
+}

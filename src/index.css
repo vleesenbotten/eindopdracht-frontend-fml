@@ -19,6 +19,7 @@
 html {
   font-family: 'Inconsolata', monospace;
   font-size: 17px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(204, 153, 255, 0.2)) no-repeat fixed;
 }
 
 @media (max-width: 900px) {

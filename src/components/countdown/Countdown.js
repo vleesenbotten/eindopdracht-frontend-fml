@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react';
+import styles from "./Countdown.module.css";
 
 function Countdown() {
     const targetDate = new Date('2023-09-06');
@@ -30,7 +31,20 @@ function Countdown() {
     }, []);
 
     return (
-        <span>{remainingTime.days} days {remainingTime.hours} hours {remainingTime.minutes} minutes</span>
+        <article className={styles["countdown_outer-container"]}>
+            <div className={styles["countdown_inner-container"]}>
+                <div className={styles["countdown_container-time"]}>{remainingTime.days}</div>
+                <p className={styles["countdown_container-text"]}>days</p>
+            </div>
+            <div className={styles["countdown_inner-container"]}>
+                <div className={styles["countdown_container-time"]}>{remainingTime.hours}</div>
+                <p className={styles["countdown_container-text"]}>hours</p>
+            </div>
+            <div className={styles["countdown_inner-container"]}>
+                <div className={styles["countdown_container-time"]}>{remainingTime.minutes}</div>
+                <p className={styles["countdown_container-text"]}>minutes</p>
+            </div>
+        </article>
     );
 }
 

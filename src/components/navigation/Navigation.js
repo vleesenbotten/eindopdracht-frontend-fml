@@ -3,14 +3,16 @@ import {NavLink} from "react-router-dom";
 import styles from "./Navigation.module.css";
 import {AuthContext} from "../../context/AuthContext";
 import Button from "../button/Button";
+import Logo from "../logo/Logo";
 
 function Navigation() {
     const {isAuth, logout} = useContext(AuthContext);
 
     return (
-       <div className={styles["inner-content-container"]}>
         <nav className={styles["nav"]}>
-            <img src="https://via.placeholder.com/100x100" alt="logo"/>
+            <span className={styles['nav_image-wrapper']}>
+                <Logo/>
+            </span>
             <ul className={styles["nav_ul"]}>
                 {isAuth ?
                     <div className={styles["nav_authorized"]}>
@@ -18,6 +20,12 @@ function Navigation() {
                             <NavLink to="/"
                                      className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
                                 home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about"
+                                     className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
+                                about
                             </NavLink>
                         </li>
                         <li>
@@ -32,10 +40,22 @@ function Navigation() {
                                 search
                             </NavLink>
                         </li>
-                        <Button type="button" clickHandler={logout} name="logout 🧨"/>
+                        <Button type="button" clickHandler={logout} name="logout"/>
                     </div>
                     :
                     <div className={styles["nav_not-authorized"]}>
+                        <li>
+                            <NavLink to="/"
+                                     className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
+                                home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about"
+                                     className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
+                                about
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink to="/login"
                                      className={({isActive}) => isActive ? styles["nav_li--active"] : styles["nav_li"]}>
@@ -52,7 +72,6 @@ function Navigation() {
                 }
             </ul>
         </nav>
-       </div>
     );
 }
 
