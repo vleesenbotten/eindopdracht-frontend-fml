@@ -117,9 +117,9 @@ This project has been set up as a final assignment. It has no other noteworthy u
 <!-- CONTACT -->
 ## Contact
 
-Tessa Helle (vleesenbotten) - [@vleesenbotten](https://twitter.com/twitter_handle) - t@email_client.com
+Tessa Helle - [@vleesenbotten](https://github.com/vleesenbotten)
 
-Project Link: [PixelPress](https://github.com/vleesenbotten/eindopdracht-frontend-fml)
+NOVI hogeschool - [@NOVI](https://www.novi.nl)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
