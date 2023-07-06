@@ -1,71 +1,131 @@
-# Getting Started with Create React App
+[//]: # (project shields here)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[//]: # (<!-- PROJECT LOGO -->)
+<br>
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="public/images/logo-image.png" alt="Logo" width="250">
+  </a>
 
-## Available Scripts
+<h3 align="center">Pixel Press</h3>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### `npm start`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](public/images/product-screenshot.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project was commissioned for NOVI University of Applied Sciences, as a final assignment for the front-end curriculum. The project was created with the help of the RAWG.io API.
 
-### `npm test`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built With
 
-### `npm run build`
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- GETTING STARTED -->
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you wish to copy the application and run it locally on your machine, follow the steps. If you encounter any issues with installing the application, please notify me by creating a pull request and submitting the issue. 
 
-### `npm run eject`
+Are you a first time user? Start with prerequisites.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+These are the following prerequisites for the application. Check if the following programs are installed on your local machine. If not, follow the instructions given. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* node.js
+  ```sh
+  download via https://nodejs.org/en
+  ```
+* API key
+  ```sh
+  request via https://rawg.io/apidocs
+  ```
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Get an API Key at [RAWG.io](https://rawg.io/apidocs)
+2. Clone the repo
+   ```sh
+   $ git clone git@github.com:vleesenbotten/eindopdracht-frontend-fml.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter the API key on the following pages
+   ```js
+   Search.js
+   GameDetails.js
+   ```
+5. Run the application
+   ```sh
+   npm start
+   ```
+6. If you encounter any errors running the npm script, run the following command
+   ```sh
+   npm test
+   ```
+7. Execute tests by choosing
+   ```sh
+   > Press a to run all tests
+   ```
+   
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- USAGE EXAMPLES -->
+## Usage
 
-### Code Splitting
+This project has been set up as a final assignment. It has no other noteworthy use beyond that.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+<!-- CONTACT -->
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Tessa Helle (vleesenbotten) - [@vleesenbotten](https://twitter.com/twitter_handle) - t@email_client.com
 
-### Making a Progressive Web App
+Project Link: [PixelPress](https://github.com/vleesenbotten/eindopdracht-frontend-fml)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Advanced Configuration
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Many special thanks to Nova, Elwyn and Sam for getting me through the final steps :)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# eindopdracht-frontend-fml
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
