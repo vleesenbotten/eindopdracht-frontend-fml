@@ -1,6 +1,4 @@
-[//]: # (project shields here)
-
-[//]: # (<!-- PROJECT LOGO -->)
+<!-- PROJECT LOGO -->
 <br>
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
@@ -42,7 +40,7 @@ This project was commissioned for NOVI University of Applied Sciences, as a fina
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+### Built with
 
 * ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -52,7 +50,7 @@ This project was commissioned for NOVI University of Applied Sciences, as a fina
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting started
 
 If you wish to copy the application and run it locally on your machine, follow the steps. If you encounter any issues with installing the application, please notify me by creating a pull request and submitting the issue. 
 
@@ -79,28 +77,32 @@ These are the following prerequisites for the application. Check if the followin
 ### Installation
 
 1. Get an API Key at [RAWG.io](https://rawg.io/apidocs)
-2. Clone the repo
+2. Clone the repo via SSH
    ```sh
    $ git clone git@github.com:vleesenbotten/eindopdracht-frontend-fml.git
    ```
-3. Install NPM packages
+3. Or clone the repo by HTTPS
+   ```sh
+    git clone https://github.com/vleesenbotten/eindopdracht-frontend-fml.git
+   ```
+4. Install NPM packages: a package.json is provided with all dependencies
    ```sh
    npm install
    ```
-4. Enter the API key on the following pages
+5. Enter your API key on the following pages
    ```js
    Search.js
    GameDetails.js
    ```
-5. Run the application
+6. Run the application
    ```sh
    npm start
    ```
-6. If you encounter any errors running the npm script, run the following command
+7. If you encounter any errors running the npm script, run the following command
    ```sh
    npm test
    ```
-7. Execute tests by choosing
+8. Execute tests by choosing
    ```sh
    > Press a to run all tests
    ```
