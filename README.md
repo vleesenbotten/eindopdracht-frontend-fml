@@ -4,8 +4,6 @@
   <a href="https://github.com/github_username/repo_name">
     <img src="public/images/logo-image.png" alt="Logo" width="250">
   </a>
-
-<h3 align="center">Pixel Press</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
