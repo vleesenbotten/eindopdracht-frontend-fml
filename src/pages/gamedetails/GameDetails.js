@@ -7,7 +7,7 @@ import Loading from "../../components/loading/Loading";
 import styles from "./GameDetails.module.css";
 
 function GameDetail() {
-    const apiKey = "bbf3b0834c524431ae361ae59491575b";
+    const apiKey = "";
     const [game, setGame] = useState([]);
     const [gameSeries, setGameSeries] = useState([]);
     const [error, toggleError] = useState(false);

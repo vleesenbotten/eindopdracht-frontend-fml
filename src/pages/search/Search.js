@@ -8,7 +8,7 @@ import styles from "./Search.module.css";
 import Background from "../../components/background/Background";
 
 function Search() {
-    const apiKey = "bbf3b0834c524431ae361ae59491575b";
+    const apiKey = "";
     const [gameData, setGameData] = useState([]);
     const [query, setQuery] = useState('');
     const [genre, setGenre] = useState("");
